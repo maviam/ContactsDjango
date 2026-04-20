@@ -8,3 +8,8 @@ class ContactAdmin(admin.ModelAdmin):
     ordering = ('-first_name',)
     list_filter = ('created_date',)
     search_fields = ('first_name','mobile_phone')
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    ordering = ("-id",)
